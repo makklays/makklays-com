@@ -80,7 +80,16 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ua',
+
+    // доступные языки
+    'available_locales' => [
+        'en',
+        'ru',
+        'es',
+        'ch',
+        'ua'
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -165,6 +174,9 @@ return [
         /*
          * Package Service Providers...
          */
+        Laravel\Tinker\TinkerServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -174,7 +186,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        App\Providers\RepositoryServiceProvider::class
     ],
 
     /*
