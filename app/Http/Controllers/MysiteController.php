@@ -995,7 +995,7 @@ class MysiteController extends Controller
         $call->save();
 
         // отправляем на email - заказ разработки
-        Mail::to('office@makklays.com')->send(new CallMail($call));
+        //Mail::to('office@makklays.com')->send(new CallMail($call));
 
         return response()->json(['success' => 'success']);
     }
