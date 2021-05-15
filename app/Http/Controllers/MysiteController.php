@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\FeedbackRequest;
 use App\Models\Article;
-use App\Call;
+use App\Models\Call;
 use App\Mail\CallMail;
 use App\Mail\FeedbackMail;
 use App\Mail\BriefOnlineMail;
@@ -994,10 +994,12 @@ class MysiteController extends Controller
         $call->created_at = time();
         $call->save();
 
-        // отправляем на email - заказ разработки
-        //Mail::to('office@makklays.com')->send(new CallMail($call));
+        //dd($call);
 
-        return response()->json(['success' => 'success']);
+        // отправляем на email - заказ разработки
+        Mail::to('office@makklays.com')->send(new CallMail($call));
+
+        return response()->json(['success' => 'success', 'call' => $call]);
     }
 
     //
