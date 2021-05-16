@@ -52,7 +52,7 @@
     <script type="text/javascript" src="<?=config('app.url')?>/js/myapp.js"></script>
     <script type="text/javascript" src="<?=config('app.url')?>/js/prism.js" ></script>
 </head>
-<body>
+<body <?= (in_array(\Route::current()->getName(), ['mysite_lpage','mysite_corporate','mysite_store','mysite_webservice','mysite_sitesytem','mysite_webportal']) ? ' class="body_bg" ' : "") ?> >
 <main role="main">
 
     <div id="myNav" class="overlay">

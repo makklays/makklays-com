@@ -24,7 +24,7 @@
                         <?php endif; ?>
                     </a>
                 </p>
-                <h4 class=""><?=$item->title?> - {{ $item->slag }}</h4>
+                <h4 class=""><?=$item->title?></h4>
                 <p class="text-justify"><?=$item->short_text?></p>
                 <p><a class="btn btn-secondary" href="{{ route('article', [app()->getLocale(), $item->slag]) }}" role="button"><?=trans('site.Read')?> &raquo;</a></p>
             </div>
