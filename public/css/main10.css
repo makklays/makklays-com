@@ -341,7 +341,7 @@ a.text-corporate {
     background-color: #e7e7e7; /*#46bf00;*/
 }
 @media screen and (min-width: 1774px) {
-    body {
+    .body_bg {
         background-image: url("/img/bg.png");
         background-repeat: no-repeat;
         background-size: contain;

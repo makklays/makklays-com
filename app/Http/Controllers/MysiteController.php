@@ -1311,7 +1311,13 @@ class MysiteController extends Controller
         }
 
         // get article
-        $articles = DB::table('articles')
+        /*$articles = DB::table('articles')
+            ->where('is_visible', 1)
+            ->where('lang', app()->getLocale())
+            ->orderByDesc('updated_at')
+            ->paginate(12);*/
+
+        $articles = Article::query()
             ->where('is_visible', 1)
             ->where('lang', app()->getLocale())
             ->orderByDesc('updated_at')
