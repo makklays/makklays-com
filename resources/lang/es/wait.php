@@ -10,4 +10,6 @@ return [
     'wait_for_a_date' => 'Esperando una cita',
     'days_from_date' => 'días desde la cita.',
     'text_wait2' => 'Estaré con flores y sonreiré)) charlaremos y caminaremos durante mucho tiempo en el parque)',
+
+    'text_wait21' => 'Fui con los flores, nosotros veveremos café y hablaremos... Y tu número de telefono no responde ahora',
 ];

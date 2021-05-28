@@ -10,4 +10,6 @@ return [
     'wait_for_a_date' => 'Waiting for a date.',
     'days_from_date' => 'days from the dating.',
     'text_wait2' => 'I will be with flowers and will smile)) we will chat and walk for a long time in the park)',
+
+    'text_wait21' => 'I’d come in with flowers, we’d have coffee and talk... and now your number’s not answering',
 ];
