@@ -238,9 +238,9 @@ Route::group([
 
         // get ip
         switch(true){
-            case (!empty(request()->server('HTTP_X_REAL_IP'))) : $ip = $_SERVER['HTTP_X_REAL_IP'];
-            case (!empty(request()->server('HTTP_CLIENT_IP'))) : $ip = $_SERVER['HTTP_CLIENT_IP'];
-            case (!empty(request()->server('HTTP_X_FORWARDED_FOR'))) : $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            case (!empty(request()->server('HTTP_X_REAL_IP'))) : $ip = request()->server('HTTP_X_REAL_IP');
+            case (!empty(request()->server('HTTP_CLIENT_IP'))) : $ip = request()->server('HTTP_CLIENT_IP');
+            case (!empty(request()->server('HTTP_X_FORWARDED_FOR'))) : $ip = request()->server('HTTP_X_FORWARDED_FOR');
             default : $ip = request()->server('REMOTE_ADDR');
         }
 
