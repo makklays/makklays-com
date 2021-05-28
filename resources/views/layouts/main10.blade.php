@@ -56,7 +56,7 @@
 <main role="main">
 
     <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="javascript:closeNav()">&times;</a>
         <div class="overlay-content">
             <a href="{{ route('mysite_about', app()->getLocale()) }}" class="block">{{ trans('site.mysite_about') }}</a>
             <a href="{{ route('mysite_howmake',  app()->getLocale()) }}" class="block">{{ trans('site.mysite_howmake') }}</a>
@@ -99,7 +99,7 @@
             <a href="tel:+380988705397" style="color:#FFF; padding-right:20px; text-decoration:none;">+380 98 8705397</a>
             <a href="mailto:office@makklays.com" style="color:#FFF; text-decoration:none;">office@makklays.com</a>
         </span>
-        <div class="mob_menu" onclick="openNav();">
+        <div class="mob_menu" onclick="javascript:openNav();">
             <div></div>
             <div></div>
             <div></div>

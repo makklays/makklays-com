@@ -35,7 +35,7 @@
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <br/>
-                <?php echo $articles->render(); ?>
+                {{ $articles->links('pagination::bootstrap-4') }}
             </div>
         </div>
     <?php endif; ?>

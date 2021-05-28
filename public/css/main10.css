@@ -709,6 +709,11 @@ img.kromka {
     /*border: 1px solid #cfcfcf;
     padding: 3px;*/
 }
+/* hover */
+.nav-link:hover {
+    color: #FFF;
+    background-color: #808080;
+}
 .nav-link.active {
     color: #FFF;
     background-color: #46bf00;
