@@ -18,7 +18,7 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/logo50.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" media="all" href="<?=config('app.url')?>/css/bootstrap4/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" media="all" href="<?=config('app.url')?>/css/main.css?<?=time()?>" />
 </head>
@@ -29,7 +29,7 @@
 
             <div class="text-center" style="margin:20px; ">
                 <a href="{{ route('/', app()->getLocale()) }}" >
-                    <img src="<?=config('app.url')?>/favicon.png" style="width: 78px;" alt="Logo" title="Makklays" />
+                    <img src="<?=config('app.url')?>/logo50.png" style="width: 78px;" alt="Logo" title="Makklays" />
                 </a>
             </div>
 
@@ -95,20 +95,14 @@
             </div>
 
             <div style="margin: 40px 0 10px 0;">
-                <a class="green" href="{{ route('test_result', 'es') }}">ES</a> |
-                <a class="green" href="{{ route('test_result', 'en') }}">EN</a> |
-                <a class="green" href="{{ route('test_result', 'ru') }}">RU</a> |
-                <a class="green" href="{{ route('test_result', 'ch') }}">CH</a>
+                <a class="green" href="{{ route('cat-o-dog-result', 'ua') }}">UA</a> |
+                <a class="green" href="{{ route('cat-o-dog-result', 'es') }}">ES</a> |
+                <a class="green" href="{{ route('cat-o-dog-result', 'en') }}">EN</a> |
+                <a class="green" href="{{ route('cat-o-dog-result', 'ru') }}">RU</a> |
+                <a class="green" href="{{ route('cat-o-dog-result', 'ch') }}">CH</a>
             </div>
 
-            <!-- div>
-                <a href="/cv_alexander_kuziv_es.html" target="_blank">CV ES</a> |
-                <a href="/cv_alexander_kuziv.html" target="_blank">CV EN</a> |
-                <a href="/cv_alexander_kuziv_ru.html" target="_blank">CV RU</a> |
-                <a href="/cv_alexander_kuziv_ch.html" target="_blank">CV CH</a>
-            </div-->
-
-            {{ trans('site.have_questions') }} <a href="{{ route('feedback', app()->getLocale()) }}">{{ trans('site.feedback') }}</a> <br/>
+            {{ trans('site.have_questions') }} <a href="{{ route('mysite_contacts', app()->getLocale()) }}">{{ trans('site.feedback') }}</a> <br/>
             &copy; makklays.com.ua, 2019-<?=date('Y')?>
 
         </div>

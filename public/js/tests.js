@@ -34,7 +34,7 @@ $(document).ready(function() {
             success: function (response) {
                 // success
                 //alert(response.result);
-                location.href = '/'+lang+'/test-result';
+                location.href = '/'+lang+'/cat-o-dog-result';
             },
             dataType: 'json'
         });

@@ -17,7 +17,7 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-    <link rel="shortcut icon" href="<?=config('app.url')?>/makklays.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="<?=config('app.url')?>/logo50.png" type="image/x-icon" />
     <!--link rel="stylesheet" type="text/css" media="all" href="/bootstrap-4.3.1/css/bootstrap.min.css" /-->
     <link rel="stylesheet" type="text/css" media="all" href="<?=config('app.url')?>/css/main.css?<?=time()?>" />
 
@@ -34,6 +34,12 @@
     </div>
 
     <div class="test-block">
+        <div class="thead" style="padding-top: 18px;">
+            <a href="{{ route('/', app()->getLocale()) }}" >
+                <img src="<?=config('app.url')?>/logo50.png" style="width: 78px;" alt="Logo" title="Makklays" />
+            </a>
+        </div>
+
         <div class="thead">
             <h1>???</h1>
         </div>
@@ -64,10 +70,11 @@
         </div>
 
         <div style="margin: 30px 0 10px 0;">
-            <a href="{{ route('/', 'es') }}">ES</a> |
-            <a href="{{ route('/', 'en') }}">EN</a> |
-            <a href="{{ route('/', 'ru') }}">RU</a> |
-            <a href="{{ route('/', 'ch') }}">CH</a>
+            <a href="{{ route('cat-o-dog', 'ua') }}">UA</a> |
+            <a href="{{ route('cat-o-dog', 'es') }}">ES</a> |
+            <a href="{{ route('cat-o-dog', 'en') }}">EN</a> |
+            <a href="{{ route('cat-o-dog', 'ru') }}">RU</a> |
+            <a href="{{ route('cat-o-dog', 'ch') }}">CH</a>
         </div>
 
         {{ trans('site.have_questions') }} <a href="{{ route('mysite_contacts', app()->getLocale()) }}">{{ trans('site.feedback') }}</a> <br/>

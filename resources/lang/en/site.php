@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'Cat-o-dog' => 'Cats or dogs',
     'Feedback' => 'Feedback',
     'header_mysite' => 'Programming and website development',
     'free_consultation' => 'Get a free consultation',
