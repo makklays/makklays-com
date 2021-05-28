@@ -26,6 +26,7 @@
                         <div class="col-md-1 text-left">
                             <select name="lang" class="form-control" id="id-lang">
                                 <option value="ru" {{ $article->lang == 'ru' ? 'selected="selected"' : '' }} >RU</option>
+                                <option value="ua" {{ $article->lang == 'ua' ? 'selected="selected"' : '' }} >UA</option>
                                 <option value="es" {{ $article->lang == 'es' ? 'selected="selected"' : '' }} >ES</option>
                                 <option value="en" {{ $article->lang == 'en' ? 'selected="selected"' : '' }} >EN</option>
                                 <option value="ch" {{ $article->lang == 'ch' ? 'selected="selected"' : '' }} >CH</option>
