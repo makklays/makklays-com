@@ -40,10 +40,10 @@ class BriefOnlineMail extends Mailable
             $arr['pathToBrief'] = base_path() . '/public/uploads/briefs/' . $this->brief->tzfile_name;
         }
 
-        return $this->from('info@makklays.com.ua')
+        return $this->from('info@makklays.com')
             //->from('mailgun@sandboxce1c29b0ff01419da0d9370c2deb2c3d.mailgun.org')
-            ->to('office@makklays.com.ua')
-            ->subject('Brief Online | Makklays.com.ua')
+            ->to('office@makklays.com')
+            ->subject('Brief Online | Makklays.com')
             ->view('emails.brief_online')
             ->with($arr);
             /*->attach(base_path() . '/public/img/makklays_.png', [

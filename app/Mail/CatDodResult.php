@@ -30,8 +30,8 @@ class CatDodResult extends Mailable
     {
         $click = '';
         $click2 = '';
-        return $this->from('info@makklays.com.ua')
-                    ->to('phpdevops@gmail.com')
+        return $this->from('info@makklays.com')
+                    ->to('alexander@makklays.com.ua')
                     ->view('emails.cat_dog_result')
                     ->with([
                         'click' => $click,

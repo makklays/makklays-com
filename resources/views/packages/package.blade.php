@@ -47,12 +47,12 @@
                 <!-- 1-не запрашивать адрес доставки -->
                 <input type="hidden" name="no_shipping" value="1" />
                 <!-- URL, куда покупатель будет перенаправлен после успешной оплаты -->
-                <input type="hidden" name="return" value="http://makklays.com.ua/buy/success" />
-                <!-- 2-method post для http://makklays.com.ua/buy/success -->
+                <input type="hidden" name="return" value="http://makklays.com/buy/success" />
+                <!-- 2-method post для http://makklays.com/buy/success -->
                 <input type="hidden" name="rm" value="2" />
-                <input type="hidden" name="cancel_return" value="http://makklays.com.ua/buy/cancel" />
+                <input type="hidden" name="cancel_return" value="http://makklays.com/buy/cancel" />
                 <!-- URL, на который PayPal будет предавать информацию о транзакции (IPN) -->
-                <input type="hidden" name="notify_url" value="http://makklays.com.ua/buy/notify" />
+                <input type="hidden" name="notify_url" value="http://makklays.com/buy/notify" />
                 <!-- оно будет передано вашему скрипту при подверждении транзакции -->
                 <input type="hidden" name="custom" value="it_buy_it" />
                 <!-- Используется для передачи номера счета - уникальный -->

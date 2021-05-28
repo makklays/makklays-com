@@ -294,7 +294,7 @@ Programación PHP con los estándares de seguridad más robustos y estabilidad d
     'Brief_on_development_site' => 'Resumen de desarrollo del sitio web',
     'brief1' => 'Un resumen sobre el desarrollo del sitio nos ayudará a comprender sus objetivos y deseos. Navegaremos mejor su proyecto y evaluaremos rápidamente el costo y el momento del desarrollo.',
     'brief2' => 'Un resumen consta de 32 campos para completar. No tiene que completar todo, pero es recomendable intentarlo. Cuanta más información completa recibamos de usted, más eficiente será nuestro trabajo.',
-    'brief3' => 'Si tiene un resumen sobre el sitio, describa la estructura del sitio o TK, puede enviárnoslo por correo - office@makklays.com.ua - o desplácese hacia abajo en esta página, hay un botón para enviar archivos.',
+    'brief3' => 'Si tiene un resumen sobre el sitio, describa la estructura del sitio o TK, puede enviárnoslo por correo - office@makklays.com - o desplácese hacia abajo en esta página, hay un botón para enviar archivos.',
     'Base_info' => 'Información general',
     'Goal_site_and_funct' => 'Objetivos y funciones del sitio',
 
@@ -457,7 +457,7 @@ Programación PHP con los estándares de seguridad más robustos y estabilidad d
     'brief_196' => 'Contáctanos',
     'brief_197' => '+38 098 870 53 97',
     'brief_city1' => 'Ucrania, Kiev',
-    'brief_email1' => 'office@makklays.com.ua',
+    'brief_email1' => 'office@makklays.com',
 
     'interesting_development' => 'Interesado en desarrollar',
     'Address' => 'La direccion',
@@ -1012,7 +1012,7 @@ La Política de privacidad actual está disponible en la página en',
     'List_documents_descr' => 'Lista de documentos necesarios para el desarrollo',
     'blacklist_descrs' => 'Lista de visitantes sospechosos del sitio que se han agregado a la lista negra',
 
-    'cookies1' => 'Al utilizar el sitio makklays.com.ua, usted acepta con ',
+    'cookies1' => 'Al utilizar el sitio makklays.com, usted acepta con ',
     'cookies2' => ' y tambien que podemos almacenar cookies (cookies) de su navegador.',
     'Accept' => 'Aceptar',
     'mysite_last_work' => 'Ultimos trabajos',

@@ -330,10 +330,10 @@ class TestController extends Controller
         $msg = 'Пройден Test PHP';
 
         $headers = 'MIME-Version: 1.0' . "\r\n";
-        $headers .= 'From: Makklays | Test PHP <info@makklays.com.ua>' . "\r\n";
+        $headers .= 'From: Makklays | Test PHP <info@makklays.com>' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
-        mail('phpdevops@gmail.com', 'Results - Test PHP | Makklays.com.ua', $msg, $headers);
+        mail('phpdevops@gmail.com', 'Results - Test PHP | Makklays.com', $msg, $headers);
         */
 
         return View('test.report', [
@@ -393,12 +393,12 @@ class TestController extends Controller
         $msg = '';
 
         //$msg = 'Уважаемый читатель.' . '<br/>';
-        //$msg .= 'Вы получили это письмо потому как Вы прошли Test PHP на сайте makklays.com.ua и указали этот e-mail для получения результатов.' . '<br/>';
-        //$msg .= 'Если это были не Вы или Вы не указывали на сайте makklays.com.ua этот e-mail - просто удалите это письмо.' . '<br/><br/>';
+        //$msg .= 'Вы получили это письмо потому как Вы прошли Test PHP на сайте makklays.com и указали этот e-mail для получения результатов.' . '<br/>';
+        //$msg .= 'Если это были не Вы или Вы не указывали на сайте makklays.com этот e-mail - просто удалите это письмо.' . '<br/><br/>';
 
         $msg = 'Dear Reader' . '<br/>';
-        $msg .= 'You received this letter because you passed Test PHP on makklays.com.ua and indicated this e-mail to receive the results.' . '<br/>';
-        $msg .= 'If it wasn’t you or you didn’t indicate this e-mail on makklays.com.ua, just delete this letter.' . '<br/><br/>';
+        $msg .= 'You received this letter because you passed Test PHP on makklays.com and indicated this e-mail to receive the results.' . '<br/>';
+        $msg .= 'If it wasn’t you or you didn’t indicate this e-mail on makklays.com, just delete this letter.' . '<br/><br/>';
 
         $msg .= '<b>Test PHP</b>';
         $msg .= '<h1>'.$title.'</h1>';
@@ -423,12 +423,12 @@ class TestController extends Controller
         }
 
         $headers = 'MIME-Version: 1.0' . "\r\n";
-        $headers .= 'From: Makklays | Test PHP <info@makklays.com.ua>' . "\r\n";
+        $headers .= 'From: Makklays | Test PHP <info@makklays.com>' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
         $to_email = $request->email;
-        //mail('phpdevops@gmail.com', 'Results - Test PHP | Makklays.com.ua', $msg, $headers);
-        //mail( $to_email, 'Results - Test PHP | Makklays.com.ua', $msg, $headers);
+        //mail('phpdevops@gmail.com', 'Results - Test PHP | Makklays.com', $msg, $headers);
+        //mail( $to_email, 'Results - Test PHP | Makklays.com', $msg, $headers);
 
         //if (session()->has('the_end')) {
             // session()->flush();

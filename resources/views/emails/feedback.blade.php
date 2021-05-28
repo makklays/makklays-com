@@ -1,7 +1,7 @@
 
 <body>
 
-<a href="http://makklays.com.ua" target="_blank" >
+<a href="http://makklays.com" target="_blank" >
     <img src="{{ $message->embed($pathToFile) }}" alt="Makklays logo" />
 </a>
 <br/>
@@ -19,7 +19,7 @@
 
 Дата: {{ date('d.m.Y H:i:s', time()) }}  <br/><br/><br/>
 
-<span style="color: grey;">Письмо с сайта <a href="http://makklays.com.ua" target="_blank" style="color:#267f00;" >makklays.com.ua</a> </span>
+<span style="color: grey;">Письмо с сайта <a href="http://makklays.com" target="_blank" style="color:#267f00;" >makklays.com</a> </span>
 <br/>
 <br/>
 <br/>

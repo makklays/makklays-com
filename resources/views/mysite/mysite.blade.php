@@ -13,8 +13,8 @@
 
     <meta property="og:title" content="Makklays Developing" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://makklays.com.ua" />
-    <meta property="og:image" content="http://makklays.com.ua/img/PHP-logo.png" />
+    <meta property="og:url" content="http://makklays.com" />
+    <meta property="og:image" content="http://makklays.com/img/PHP-logo.png" />
 
     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
     <link href="/css/bootstrap4/css/bootstrap.css" rel="stylesheet" />
@@ -292,7 +292,7 @@
                         <div style="margin:0 0 10px 0;">{{ trans('site.adres') }}</div>
 
                         <div>Skype: makklays </div>
-                        <div>E-mail: <strong>office@makklays.com.ua</strong></div>
+                        <div>E-mail: <strong>office@makklays.com</strong></div>
                         <div style="margin:0 0 10px 0;">Mob.: <strong>+38 098 870 5397</strong></div>
 
                         <div>{{ trans('site.or') }} <a href="{{ route('feedback', app()->getLocale()) }}">{{ trans('site.pishite') }}</a> </div>
@@ -425,7 +425,7 @@
             <img src="/img/makklays_.png" alt="&copy; Makklays" title="Makklays" />
             </a>
         </div>
-        <div>&copy; makklays.com.ua 2019 - <?=date('Y')?></div>
+        <div>&copy; makklays.com 2019 - <?=date('Y')?></div>
         <div>All Rights Reserved.</div>
     </div>
 </div>

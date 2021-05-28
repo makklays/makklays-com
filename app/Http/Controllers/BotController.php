@@ -44,7 +44,7 @@ class BotController extends Controller
         }
 
         // url and tocken for registration file on site
-        // https://api.telegram.org/bot1341219753:AAEZmkRU-J8CEnVVNaz77Kole0R2dqFySJA/setWebhook?url=https://makklays.com.ua/bota
+        // https://api.telegram.org/bot1341219753:AAEZmkRU-J8CEnVVNaz77Kole0R2dqFySJA/setWebhook?url=https://makklays.com/bota
         define('TOKEN', '1341219753:AAEZmkRU-J8CEnVVNaz77Kole0R2dqFySJA');
 
         // Функция вызова методов API.

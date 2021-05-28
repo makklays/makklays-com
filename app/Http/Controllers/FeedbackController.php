@@ -61,8 +61,8 @@ class FeedbackController extends Controller
             ]);
 
         $og['title'] = 'Makklays | ' . trans('wait.i_wait_you_');
-        $og['url'] = 'http://makklays.com.ua/'. app()->getLocale() .'/wait';
-        $og['image'] = 'http://makklays.com.ua/img/wait.jpg';
+        $og['url'] = 'http://makklays.com/'. app()->getLocale() .'/wait';
+        $og['image'] = 'http://makklays.com/img/wait.jpg';
 
         return view('feedback.wait', [ 'og' => $og ]);
     }
@@ -82,8 +82,8 @@ class FeedbackController extends Controller
             ]);
 
         $og['title'] = 'Makklays | ' . trans('wait.i_wait_you_');
-        $og['url'] = 'http://makklays.com.ua/'. app()->getLocale() .'/wait';
-        $og['image'] = 'http://makklays.com.ua/img/wait.jpg';
+        $og['url'] = 'http://makklays.com/'. app()->getLocale() .'/wait';
+        $og['image'] = 'http://makklays.com/img/wait.jpg';
 
         return view('feedback.wait2', ['og' => $og ]);
     }

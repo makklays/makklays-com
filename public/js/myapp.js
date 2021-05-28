@@ -123,7 +123,7 @@ $(document).ready(function() {
     // оставляем куку с датой принятия кук
     $('#id_accept').on('click', function() {
         document.cookie = "date=<?=date('d.m.Y H:i:s')?>";
-        //document.cookie = "ddate=<?=date('d.m.Y H:i:s')?>; path=/; domain=makklays.com.ua; secure";
+        //document.cookie = "ddate=<?=date('d.m.Y H:i:s')?>; path=/; domain=makklays.com; secure";
         console.log('The cookie "date" exists (ES5)');
         $('#id_div_accept').css('display', 'none');
     });

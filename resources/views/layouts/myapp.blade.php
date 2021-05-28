@@ -24,7 +24,7 @@
     <meta property="og:title" content="Makklays" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ url()->current() }}" />
-    <meta property="og:image" content="https://makklays.com.ua/img/dog.jpg" />
+    <meta property="og:image" content="https://makklays.com/img/dog.jpg" />
 
     <link rel="shortcut icon" href="<?=config('app.url')?>/favicon.png" type="image/x-icon" >
 
