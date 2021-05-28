@@ -103,7 +103,7 @@
             </div>
 
             {{ trans('site.have_questions') }} <a href="{{ route('mysite_contacts', app()->getLocale()) }}">{{ trans('site.feedback') }}</a> <br/>
-            &copy; makklays.com, 2019-<?=date('Y')?>
+            &copy; makklays.com 2019-<?=date('Y')?>
 
         </div>
     </div>
