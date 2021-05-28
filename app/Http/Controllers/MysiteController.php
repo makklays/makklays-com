@@ -128,9 +128,9 @@ class MysiteController extends Controller
         /*$msg = 'ip: '.$ip.'<br/>strana: '.$strana_rus.'<br/>city: '.$city_rus.'<br/>'.
                'lat: '.$lat.'<br/> lon: '.$lon.'<br/><br/>date: ' . date('d.m.Y H:i').'<br/><br/>';
         $headers =  'MIME-Version: 1.0' . "\r\n";
-        $headers .= 'From: makklays.com.ua <office@makklays.com.ua>' . "\r\n";
+        $headers .= 'From: makklays.com <office@makklays.com>' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";*/
-        //mail('phpdevops@gmail.com', 'Result of test on makklays.com.ua', $msg, $headers);
+        //mail('phpdevops@gmail.com', 'Result of test on makklays.com', $msg, $headers);
 
         return view('mysite.main', [
             'seo' => $seo,
@@ -1239,7 +1239,7 @@ class MysiteController extends Controller
             ]);
 
         // отправляем на email - заполненный бриф - заказ разработки
-        Mail::to('office@makklays.com.ua')->send(new BriefOnlineMail($brief)); // сделать
+        Mail::to('office@makklays.com')->send(new BriefOnlineMail($brief)); // сделать
 
         return redirect(route('mysite_online_brief', app()->getLocale()))->with([
             'flash_message' => trans('site.send_success'),

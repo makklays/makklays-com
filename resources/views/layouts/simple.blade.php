@@ -24,8 +24,8 @@
 
     <meta property="og:title" content="<?=(isset($og['title']) && !empty($og['title']) ? $og['title'] : 'Makklays')?>" />
     <meta property="og:type" content="<?=(isset($og['type']) && !empty($og['type']) ? $og['type'] : 'website')?>" />
-    <meta property="og:url" content="<?=(isset($og['url']) && !empty($og['url']) ? $og['url'] : 'http://makklays.com.ua/en')?>" />
-    <meta property="og:image" content="<?=(isset($og['image']) && !empty($og['image']) ? $og['image'] : 'http://makklays.com.ua/makklays.png')?>" />
+    <meta property="og:url" content="<?=(isset($og['url']) && !empty($og['url']) ? $og['url'] : 'http://makklays.com/en')?>" />
+    <meta property="og:image" content="<?=(isset($og['image']) && !empty($og['image']) ? $og['image'] : 'http://makklays.com/makklays.png')?>" />
 
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
@@ -75,7 +75,7 @@
             <a href="{{ route('wait', 'ch') }}">CH</a>
         </div-->
 
-        &copy; makklays.com.ua 2019-<?=date('Y')?>
+        &copy; makklays.com 2019-<?=date('Y')?>
     </div>
 </div>
 </body>

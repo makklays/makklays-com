@@ -63,11 +63,11 @@
                 <!--div class="col-md-2 col-sm-2 col-3 text-right" style="font-size:14px; color:#FFF;">+38(098)8705397</div-->
                 <!--div class="col-md-12 text-right" style="font-size:14px; color:#212529;">
                     <a href="tel:+380988705397" style="color:#212529; padding-right:20px;">+38 (098) 8705397</a>
-                    <a href="mailto:office@makklays.com.ua" style="color:#212529;">office@makklays.com.ua</a>
+                    <a href="mailto:office@makklays.com" style="color:#212529;">office@makklays.com</a>
                 </div-->
                 <div class="col-md-12 text-right" style="font-size:14px; color:#FFF;">
                     <a href="tel:+380988705397" style="color:#FFF; padding-right:20px; text-decoration:none;">+38 (098) 8705397</a>
-                    <a href="mailto:office@makklays.com.ua" style="color:#FFF; text-decoration:none;">office@makklays.com.ua</a>
+                    <a href="mailto:office@makklays.com" style="color:#FFF; text-decoration:none;">office@makklays.com</a>
                 </div>
             </div>
         </div>
@@ -220,11 +220,11 @@
                 <div><a href="{{ route('wait', app()->getLocale()) }}" class="a-green">{{ trans('wait.i_wait_you') }}</a></div>
                 <div><a href="{{ route('wait2', app()->getLocale()) }}" class="a-green">{{ trans('wait.wait_for_a_date') }}</a></div>
                 <div><a href="{{ route('seo_words', app()->getLocale()) }}" class="a-green">{{ trans('site.count_seo_words') }}</a></div>
-                <div><a href="https://makklays.com.ua/sitemap.xml" class="a-green">Sitemap</a></div>
+                <div><a href="https://makklays.com/sitemap.xml" class="a-green">Sitemap</a></div>
                 <br/>
             </div>
             <div class="col-md-12">
-                <p>&copy; makklays.com.ua 2007-<?=date('Y')?></p>
+                <p>&copy; makklays.com 2007-<?=date('Y')?></p>
             </div>
         </div>
     </div>
@@ -445,7 +445,7 @@
     // оставляем куку с датой принятия кук
     $('#id_accept').on('click', function(){
         document.cookie = "date=<?=date('d.m.Y H:i:s')?>";
-        //document.cookie = "ddate=<?=date('d.m.Y H:i:s')?>; path=/; domain=makklays.com.ua; secure";
+        //document.cookie = "ddate=<?=date('d.m.Y H:i:s')?>; path=/; domain=makklays.com; secure";
         console.log('The cookie "date" exists (ES5)');
         $('#id_div_accept').css('display', 'none');
     });

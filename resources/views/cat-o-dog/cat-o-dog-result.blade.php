@@ -13,8 +13,8 @@
 
     <meta property="og:title" content="Cats ??? or ??? Dogs" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://makklays.com.ua" />
-    <meta property="og:image" content="https://makklays.com.ua/favicon.png" />
+    <meta property="og:url" content="https://makklays.com" />
+    <meta property="og:image" content="https://makklays.com/favicon.png" />
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -103,7 +103,7 @@
             </div>
 
             {{ trans('site.have_questions') }} <a href="{{ route('mysite_contacts', app()->getLocale()) }}">{{ trans('site.feedback') }}</a> <br/>
-            &copy; makklays.com.ua, 2019-<?=date('Y')?>
+            &copy; makklays.com, 2019-<?=date('Y')?>
 
         </div>
     </div>

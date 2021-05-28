@@ -12,8 +12,8 @@
 
     <meta property="og:title" content="Test PHP | Makklays" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ config('app.url', 'https://makklays.com.ua') }}" />
-    <meta property="og:image" content="{{ config('app.url', 'https://makklays.com.ua') }}/img/PHP-logo.png" />
+    <meta property="og:url" content="{{ config('app.url', 'https://makklays.com') }}" />
+    <meta property="og:image" content="{{ config('app.url', 'https://makklays.com') }}/img/PHP-logo.png" />
 
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
@@ -71,7 +71,7 @@
     </div>
 
     {{ trans('site.have_questions') }} <a href="{{ route('mysite_contacts', app()->getLocale()) }}">{{ trans('site.feedback') }}</a> <br/>
-    &copy; makklays.com.ua 2019-<?=date('Y')?>
+    &copy; makklays.com 2019-<?=date('Y')?>
 </div>
 
 </body>

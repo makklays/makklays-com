@@ -13,8 +13,8 @@
 
     <meta property="og:title" content="Makklays | Feedback" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://makklays.com.ua" />
-    <meta property="og:image" content="https://makklays.com.ua/favicon.png" />
+    <meta property="og:url" content="https://makklays.com" />
+    <meta property="og:image" content="https://makklays.com/favicon.png" />
 
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
@@ -89,7 +89,7 @@
             <a href="{{ route('feedback', 'ch') }}">CH</a>
         </div>
 
-        &copy; makklays.com.ua, 2019-<?=date('Y')?>
+        &copy; makklays.com, 2019-<?=date('Y')?>
     </div>
 </body>
 </html>

@@ -31,10 +31,10 @@ class FeedbackMail extends Mailable
      */
     public function build()
     {
-        return $this->from('info@makklays.com.ua')
+        return $this->from('info@makklays.com')
             //->from('mailgun@sandboxce1c29b0ff01419da0d9370c2deb2c3d.mailgun.org')
-            ->to('office@makklays.com.ua')
-            ->subject('Feedback | Makklays.com.ua')
+            ->to('office@makklays.com')
+            ->subject('Feedback | Makklays.com')
             ->view('emails.feedback')
             ->with([
                 'name' => $this->feedback->name,

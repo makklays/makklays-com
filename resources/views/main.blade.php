@@ -12,8 +12,8 @@
 
     <meta property="og:title" content="Makklays" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://makklays.com.ua" />
-    <meta property="og:image" content="https://makklays.com.ua/img/dog.jpg" />
+    <meta property="og:url" content="https://makklays.com" />
+    <meta property="og:image" content="https://makklays.com/img/dog.jpg" />
 
     <link rel="shortcut icon" href="<?=config('app.url')?>/favicon.png" type="image/x-icon" >
 
