@@ -28,8 +28,8 @@
         <div class="col-md-12 text-center" style="font-size:14px;">
             <div class="text-center" style="width:280px; margin: 0 auto;">
 
-                <div style="float:left;">
-                    <img src="<?=config('app.url')?>/img/eye.jpg" alt="eye" title="Makklays - {{ trans('site.views') }} image" style="width:18px;" /> {{ $article->views }}
+                <div style="float:left; font-size: 18px;">
+                    <i class="fa fa-eye"></i> {{ $article->views }}
                 </div>
 
                 <!-- Load Facebook SDK for JavaScript -->
