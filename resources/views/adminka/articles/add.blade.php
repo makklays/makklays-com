@@ -22,6 +22,7 @@
                         <div class="col-md-1">
                             <select name="lang" class="form-control" id="id-lang">
                                 <option value="ru">RU</option>
+                                <option value="ua">UA</option>
                                 <option value="es">ES</option>
                                 <option value="en">EN</option>
                                 <option value="ch">CH</option>
