@@ -67,9 +67,9 @@ Route::group([
     Route::get('article/{slug}', 'App\Http\Controllers\MysiteController@showArticle')->name('article');
     Route::get('articles', 'App\Http\Controllers\MysiteController@listArticles')->name('articles');
 
-    Route::get('main', ['as' => 'main', function () {
-        return view('test'); // 'main'
-    }]);
+    /*Route::get('cat-o-dog', ['as' => 'cat-o-dog', function () {
+        return view('cat-o-dog'); // 'main'
+    }]);*/
 
     Route::get('wait', 'App\Http\Controllers\FeedbackController@wait')->name('wait');
     Route::get('wait2', 'App\Http\Controllers\FeedbackController@wait2')->name('wait2');
@@ -229,23 +229,38 @@ Route::group([
 
 
     /* test */
-    Route::get('test', function () {
-        return view('test');
-    });
+    Route::get('cat-o-dog', ['as' => 'cat-o-dog', function () {
+        return view('cat-o-dog.cat-o-dog');
+    }]);
     Route::match(['post'], 'test-data/{choice}', function ($lang, $choice = '') {
 
         Session::put('choice_cat_dog', $choice);
 
-        // get IP
-        function getRealUserIp(){
-            switch(true){
-                case (!empty($_SERVER['HTTP_X_REAL_IP'])) : return $_SERVER['HTTP_X_REAL_IP'];
-                case (!empty($_SERVER['HTTP_CLIENT_IP'])) : return $_SERVER['HTTP_CLIENT_IP'];
-                case (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) : return $_SERVER['HTTP_X_FORWARDED_FOR'];
-                default : return $_SERVER['REMOTE_ADDR'];
-            }
+        // get ip
+        switch(true){
+            case (!empty(request()->server('HTTP_X_REAL_IP'))) : $ip = $_SERVER['HTTP_X_REAL_IP'];
+            case (!empty(request()->server('HTTP_CLIENT_IP'))) : $ip = $_SERVER['HTTP_CLIENT_IP'];
+            case (!empty(request()->server('HTTP_X_FORWARDED_FOR'))) : $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            default : $ip = request()->server('REMOTE_ADDR');
         }
-        $ip = getRealUserIp();
+
+        // Add to DB table 'tests'
+        $cat_o_dog = \App\Models\Test::create([
+            'choice' => $choice,
+            'ip' => $ip,
+            /*'strana' => '',
+            'city' => '',
+            'region' => '',
+            'strana_rus' => '',
+            'city_rus' => '',
+            'region_rus' => '',
+            'zip_code' => '',
+            'strana_code' => '',
+            'time_zone' => '',
+            'lat' => '',
+            'lon' => '',*/
+            'created_at' => strtotime(now())
+        ]);
 
         if (!empty($choice)) {
             $response = ['result' => 'Ok!'];
@@ -258,8 +273,9 @@ Route::group([
 
     })->where(['choice' => '[cat|dog]+']);
 
-    Route::get('test-result', ['as' => 'test_result', function () {
+    Route::get('cat-o-dog-result', ['as' => 'cat-o-dog-result', function () {
         $choice_cat_dog = Session::get('choice_cat_dog');
+
         // count all tests
         $select_all = DB::selectOne('SELECT count(*) as count_all FROM tests ');
         $count_all = (isset($select_all->count_all) && !empty($select_all->count_all) ? $select_all->count_all : 0);
@@ -272,7 +288,7 @@ Route::group([
             }
         }
 
-        return view('test-result', [
+        return view('cat-o-dog.cat-o-dog-result', [
             'count_all' => $count_all,
             'count_choices' => $count_choices,
             'choice_cat_dog' => $choice_cat_dog,

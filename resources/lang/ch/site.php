@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'Cat-o-dog' => '貓或狗',
     'Feedback' => '反饋',
     'header_mysite' => '編程和網站開發',
     'free_consultation' => '獲得免費諮詢',

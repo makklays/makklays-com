@@ -29,7 +29,7 @@
     <meta property="og:url" content="{{ url()->current() }}" />
     <meta property="og:image" content="<?=config('app.url')?>/img/development.jpeg" />
 
-    <link rel="shortcut icon" href="<?=config('app.url')?>/makklays.png" type="image/x-icon" >
+    <link rel="shortcut icon" href="<?=config('app.url')?>/logo50.png" type="image/x-icon" >
 
     <!-- Scripts -->
     <script src="{{ asset('js/jquery-3.4.0.min.js') }}" type="text/javascript"></script>
@@ -63,7 +63,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('home', app()->getLocale()) }}" style="padding-top:0; padding-bottom:0;">
-                    <img id="logo" class="d-inline-block mr-1" alt="Logo" src="/makklays.png" style="width:39px;" />
+                    <img id="logo" class="d-inline-block mr-1" alt="Logo" src="/logo50.png" style="width:39px;" />
                     Makklays
                     <!-- div class="d-inline-block mr-1">Makklays<span>text</span></div -->
                     <!-- {{ config('app.name', 'Laravel') }} -->
