@@ -8,14 +8,17 @@
         <div style="margin-bottom:40px;"><span id="wait"></span></div>
 
         <div style="margin-bottom:40px; text-align:center; width:300px; border: 1px solid #e7e7e7; font-size:26px; padding:10px;">
+            {{ trans('wait.text_wait21') }} <br/><br/>
+            -----<br/><br/>
             {{ trans('wait.text_wait2') }} <br/><br/>
             {{ trans('wait.wait_for_a_date') }} <br/>
-            <!--&#9742;--> <!--&#9749;--> <span style="color:red;">&#10084;</span> <br/><br/>
+            <!--&#9742;--> <!--&#9749;--> <span style="color:red;">&#10084;</span> <br/>
         </div>
     </div>
 
     <div style="text-align:center; width:322px; margin-top:40px; margin-left:auto; margin-right:auto; ">
         <div style="margin: 20px 0 10px 0;">
+            <a href="{{ route('wait2', 'ua') }}">UA</a> |
             <a href="{{ route('wait2', 'es') }}">ES</a> |
             <a href="{{ route('wait2', 'en') }}">EN</a> |
             <a href="{{ route('wait2', 'ru') }}">RU</a> |
