@@ -40,7 +40,7 @@
                         </tbody>
                     </table>
 
-                    <?php echo $reports->render(); ?>
+                    <?php echo $reports->links('pagination::bootstrap-4'); ?>
 
                 <?php else: ?>
                     <div style="margin-top:50px;">

@@ -46,7 +46,7 @@
                         </tbody>
                     </table>
 
-                    <?php echo $employees->render(); ?>
+                    <?php echo $employees->links('pagination::bootstrap-4'); ?>
                 <?php else: ?>
                     <div style="margin-top:50px;">
                         <i>Not employees</i>

@@ -31,7 +31,7 @@
                     </tbody>
                 </table>
 
-                <?php echo $blacklists->render(); ?>
+                <?php echo $blacklists->links('pagination::bootstrap-4'); ?>
 
                 <?php else: ?>
                 <div style="margin-top:50px;">
