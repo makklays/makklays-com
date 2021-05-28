@@ -33,6 +33,8 @@ class OrdersController extends Controller
         //$companies = DB::select('SELECT * FROM companies ');
         $orders = DB::table('orders')->orderBy('created_at', 'DESC')->paginate(20);
 
+        //dd($orders);
+
         /*if (isset($companies) && !empty($companies)) {
             foreach($companies as &$company) {
                 $employees = DB::selectOne('SELECT count(id) as count FROM employees WHERE company_id=?', [$company->id]);
@@ -85,7 +87,7 @@ class OrdersController extends Controller
                     ->withInput();
             }
 
-            $insert = DB::insert('INSERT INTO orders SET lang=?, price_uah=?, type_site=?, status=?, title=?, 
+            $insert = DB::insert('INSERT INTO orders SET lang=?, price_uah=?, type_site=?, status=?, title=?,
             short_text=?, description=?, from_date=?, to_date=?, created_at=?',
                 [
                     $request->lang, $request->price, $request->type_site, $request->status, $request->title,
@@ -146,8 +148,8 @@ class OrdersController extends Controller
             }
 
             if (isset($filename) && !empty($filename)) {
-                DB::update('UPDATE `orders` SET lang=?, price_uah=?, type_site=?, status=?, title=?, 
-                                        short_text=?, description=?, from_date=?, to_date=?, tzfile=?, updated_at=? 
+                DB::update('UPDATE `orders` SET lang=?, price_uah=?, type_site=?, status=?, title=?,
+                                        short_text=?, description=?, from_date=?, to_date=?, tzfile=?, updated_at=?
                                    WHERE id=?', [
                     $request->lang,
                     $request->price,
@@ -163,8 +165,8 @@ class OrdersController extends Controller
                     $id
                 ]);
             } else {
-                DB::update('UPDATE `orders` SET lang=?, price_uah=?, type_site=?, status=?, title=?, 
-                                        short_text=?, description=?, from_date=?, to_date=?, updated_at=? 
+                DB::update('UPDATE `orders` SET lang=?, price_uah=?, type_site=?, status=?, title=?,
+                                        short_text=?, description=?, from_date=?, to_date=?, updated_at=?
                                    WHERE id=?', [
                     $request->lang,
                     $request->price,

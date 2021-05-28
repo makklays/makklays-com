@@ -19,6 +19,7 @@
                                 <label for="id-lang" class="col-md-12 col-form-label text-md-left">{{ trans('site.Lang') }}</label>
                                 <select name="lang" class="form-control" id="id-lang">
                                     <option value="ru">RU</option>
+                                    <option value="ua">UA</option>
                                     <option value="es">ES</option>
                                     <option value="en">EN</option>
                                     <option value="ch">CH</option>
@@ -54,6 +55,7 @@
                                 <label for="id-lang" class="col-md-12 col-form-label text-md-left">{{ trans('site.Status') }}</label>
                                 <select name="status" class="form-control" id="id-lang">
                                     <option value="new">New</option>
+                                    <option value="prototype">Prototype</option>
                                     <option value="designing">Designing</option>
                                     <option value="inprocess">In process</option>
                                     <option value="testing">Testing</option>

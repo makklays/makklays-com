@@ -10,7 +10,7 @@
 
                 <h2>{{ trans('site.Add_order') }}</h2>
 
-                <form action="{{ route('adm-order-edit', ['lang'=>app()->getLocale(), 'order_id' => $order->id]) }}" method="POST" enctype="multipart/form-data" >
+                <form action="{{ route('adm-order-edit', ['locale'=>app()->getLocale(), 'order_id' => $order->id]) }}" method="POST" enctype="multipart/form-data" >
                     {{ csrf_field() }}
 
                     <div class="row">
@@ -19,6 +19,7 @@
                                 <label for="id-lang" class="col-md-12 col-form-label text-md-left">{{ trans('site.Lang') }}</label>
                                 <select name="lang" class="form-control" id="id-lang">
                                     <option value="ru" {{ $order->lang == 'ru' ? 'selected="selected"' : '' }} >RU</option>
+                                    <option value="ua" {{ $order->lang == 'ua' ? 'selected="selected"' : '' }} >UA</option>
                                     <option value="es" {{ $order->lang == 'es' ? 'selected="selected"' : '' }} >ES</option>
                                     <option value="en" {{ $order->lang == 'en' ? 'selected="selected"' : '' }} >EN</option>
                                     <option value="ch" {{ $order->lang == 'ch' ? 'selected="selected"' : '' }} >CH</option>
@@ -57,6 +58,7 @@
                                 <label for="id-lang" class="col-md-12 col-form-label text-md-left">{{ trans('site.Status') }}</label>
                                 <select name="status" class="form-control" id="id-lang">
                                     <option value="new" {{ $order->status == 'new' ? 'selected="selected"' : '' }} >New</option>
+                                    <option value="prototype" {{ $order->status == 'prototype' ? 'selected="selected"' : '' }} >Prototype</option>
                                     <option value="designing" {{ $order->status == 'designing' ? 'selected="selected"' : '' }} >Designing</option>
                                     <option value="inprocess" {{ $order->status == 'inprocess' ? 'selected="selected"' : '' }} >In process</option>
                                     <option value="testing" {{ $order->status == 'testing' ? 'selected="selected"' : '' }} >Testing</option>
@@ -157,7 +159,7 @@
                     </div>
 
                     <br/><br/>
-                    <input type="submit" value="{{ trans('site.Edit_order') }}" class="btn btn-success text-center" />
+                    <input type="submit" value="{{ trans('site.Save') }}" class="btn btn-success text-center" />
                 </form>
 
             </div>
