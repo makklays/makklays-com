@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'Cancel' => 'Cancela',
+    'Data_employee' => 'Los datos de empleado',
     'Cat-o-dog' => 'Gattos o perros',
     'Feedback' => 'Realimentación',
     'header_mysite' => 'Programación y desarrollo de sitios web.',
@@ -1076,6 +1078,8 @@ Los sitios del sistema están disponibles en días y horarios hábiles en la emp
     'Add_new_employee' => 'Añadir nuevo empleado',
 
     'Pricee' => 'Precio',
+
+    'cart' => 'Carra',
     '' => '',
     '' => '' ,
     '' => '' ,

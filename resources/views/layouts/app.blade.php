@@ -49,6 +49,7 @@
     <link href="{{ asset('css/package.css') }}" rel="stylesheet"-->
     <link rel="stylesheet" type="text/css" media="all" href="<?=config('app.url')?>/css/bootstrap4/css/bootstrap.min.css?<?=time()?>" />
     <link rel="stylesheet" type="text/css" media="all" href="<?=config('app.url')?>/css/admin-main8.css?<?=time()?>" />
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('/css/fontawesome5/css/all.css?'.time()) }}" />
 
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset('/css/jquery-ui.theme.css?'.time()) }}" />
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset('/css/jquery-ui.css?'.time()) }}" />

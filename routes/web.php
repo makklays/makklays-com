@@ -37,6 +37,8 @@ Route::group([
     // home
     Route::get('home', 'App\Http\Controllers\HomeController@index')->name('home');
 
+    Route::get('portfolio', ['as' => 'mysite_portfolio', 'uses' => 'App\Http\Controllers\MysiteController@portfolio']);
+
     // main pages
     Route::get('about-us', ['as' => 'mysite_about', 'uses' => 'App\Http\Controllers\MysiteController@about']);
     Route::get('we-making', ['as' => 'mysite_howmake', 'uses' => 'App\Http\Controllers\MysiteController@howmake']);
@@ -150,18 +152,13 @@ Route::group([
     ])->where(['id' => '[0-9]+']);
 
     /* employees */
-    Route::get('admin/employees', [
-        'as' => 'employees', 'uses' => 'App\Http\Controllers\EmployeesController@showEmployees'
-    ]);
-    Route::match(['get', 'post'], 'admin/employees/add', [
-        'as' => 'employee_add', 'uses' => 'App\Http\Controllers\EmployeesController@addEmployee'
-    ]);
-    Route::match(['get', 'post'], 'admin/employees/del/{id}', [
-        'as' => 'employee_delete', 'uses' => 'App\Http\Controllers\EmployeesController@delete'
-    ])->where(['id' => '[0-9]+']);
-    Route::match(['get', 'post'], 'admin/employees/edit/{id}', [
-        'as' => 'employee_edit', 'uses' => 'App\Http\Controllers\EmployeesController@edit'
-    ])->where(['id' => '[0-9]+']);
+    Route::get('admin/employees', ['as' => 'employees', 'uses' => 'App\Http\Controllers\EmployeesController@index']);
+    Route::get('admin/employee/add', ['as' => 'employee_add', 'uses' => 'App\Http\Controllers\EmployeesController@add']);
+    Route::post('admin/employee/add', ['as' => 'employee_add_process', 'uses' => 'App\Http\Controllers\EmployeesController@add_process']);
+    Route::get('admin/employee/del/{id}', ['as' => 'employee_delete', 'uses' => 'App\Http\Controllers\EmployeesController@delete'])->where(['id' => '[0-9]+']);
+    Route::get('admin/employee/edit/{id}', ['as' => 'employee_edit', 'uses' => 'App\Http\Controllers\EmployeesController@edit'])->where(['id' => '[0-9]+']);
+    Route::post('admin/employee/edit/{id}', ['as' => 'employee_edit_process', 'uses' => 'App\Http\Controllers\EmployeesController@edit_process'])->where(['id' => '[0-9]+']);
+    Route::get('admin/employee/show/{id}', ['as' => 'employee_show', 'uses' => 'App\Http\Controllers\EmployeesController@show'])->where(['id' => '[0-9]+']);
 
     /* about me */
     Route::get('admin/about2', ['as' => 'about', 'uses' => 'App\Http\Controllers\TodoController@about2']); // биография

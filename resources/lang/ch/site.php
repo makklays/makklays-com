@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'Cancel' => 'Cancel',
+    'Data_employee' => 'Data de employee',
     'Cat-o-dog' => '貓或狗',
     'Feedback' => '反饋',
     'header_mysite' => '編程和網站開發',
@@ -1072,6 +1074,8 @@ c）在用戶同意下披露。',
     'Add_new_employee' => '添加新員工',
 
     'Pricee' => '價格',
+
+    'cart' => '籃子',
     '' => '',
     '' => '',
     '' => '',
