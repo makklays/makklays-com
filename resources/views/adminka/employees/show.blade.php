@@ -24,12 +24,12 @@
                             <td>{{ $employee->id }}</td>
                         </tr>
                         <tr>
-                            <th scope="row">{{ trans('site.Lastname') }}</th>
-                            <td>{{ $employee->lastname }}</td>
-                        </tr>
-                        <tr>
                             <th scope="row">{{ trans('site.Firstname') }}</th>
                             <td>{{ $employee->firstname }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{{ trans('site.Lastname') }}</th>
+                            <td>{{ $employee->lastname }}</td>
                         </tr>
                         <tr>
                             <th scope="row">{{ trans('site.Post') }}</th>
