@@ -174,11 +174,11 @@
         <div class="row" style="padding:20px 0 0 0;">
             <div class="col-md-4 col-sm-6 col-12">
                 <h4>{{ trans('site.Team') }}</h4>
-                <div><a href="{{ route('mysite_about', app()->getLocale()) }}" class="a-green">{{ trans('site.mysite_about') }}</a></div>
-                <div><a href="{{ route('mysite_howmake', app()->getLocale()) }}" class="a-green">{{ trans('site.mysite_howmake') }}</a></div>
-                <div><a href="{{ route('mysite_whatmake', app()->getLocale()) }}" class="a-green">{{ trans('site.mysite_whatmake') }}</a></div>
-                <div><a href="{{ route('mysite_articles', app()->getLocale()) }}" class="a-green">{{ trans('site.Articles') }}</a></div>
-                <div><a href="{{ route('mysite_contacts', app()->getLocale()) }}" class="a-green">{{ trans('site.contacts') }}</a></div>
+                <div><a href="{{ route('mysite_about', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.mysite_about') }}</a></div>
+                <div><a href="{{ route('mysite_howmake', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.mysite_howmake') }}</a></div>
+                <div><a href="{{ route('mysite_whatmake', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.mysite_whatmake') }}</a></div>
+                <div><a href="{{ route('mysite_articles', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.Articles') }}</a></div>
+                <div><a href="{{ route('mysite_contacts', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.contacts') }}</a></div>
                 <div style="padding:20px 0 0 0;">
                     <h4>{{ trans('site.Lang') }}</h4>
                     <a href="{{ route('/', 'ua') }}"><img src="<?=config('app.url')?>/img/flags/ukraine-flag.png" style="width:28px;" alt="UA" title="UA" /></a>  &nbsp;
@@ -191,12 +191,12 @@
             </div>
             <div class="col-md-4 col-sm-6 col-12">
                 <h4>{{ trans('site.Development') }}</h4>
-                <div><a href="{{ route('mysite_lpage', app()->getLocale()) }}" class="a-green">{{ trans('site.m_lpage') }}</a></div>
-                <div><a href="{{ route('mysite_store', app()->getLocale()) }}" class="a-green">{{ trans('site.m_store') }}</a></div>
-                <div><a href="{{ route('mysite_corporate', app()->getLocale()) }}" class="a-green">{{ trans('site.m_corporate') }}</a></div>
-                <div><a href="{{ route('mysite_webservice', app()->getLocale()) }}" class="a-green">{{ trans('site.m_webapi') }}</a></div>
-                <div><a href="{{ route('mysite_webportal', app()->getLocale()) }}" class="a-green">{{ trans('site.m_webportal') }}</a></div>
-                <div><a href="{{ route('mysite_sitesytem', app()->getLocale()) }}" class="a-green">{{ trans('site.m_sitesystem') }}</a></div>
+                <div><a href="{{ route('mysite_lpage', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.m_lpage') }}</a></div>
+                <div><a href="{{ route('mysite_store', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.m_store') }}</a></div>
+                <div><a href="{{ route('mysite_corporate', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.m_corporate') }}</a></div>
+                <div><a href="{{ route('mysite_webservice', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.m_webapi') }}</a></div>
+                <div><a href="{{ route('mysite_webportal', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.m_webportal') }}</a></div>
+                <div><a href="{{ route('mysite_sitesytem', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.m_sitesystem') }}</a></div>
                 <div style="padding:20px 0 0 0;">
                     <a href="https://www.youtube.com/channel/UCTnzcnfJ9LWjibVcq2wigtw" style="color:#FFFFFF; text-decoration:none;" target="_blank" >
                         <img src="<?=config('app.url')?>/img/youtube-icon.png" style="width:25px;" alt="Youtube" />
@@ -212,19 +212,19 @@
             </div>
             <div class="col-md-4">
                 <h4>{{ trans('site.Care') }}</h4>
-                <div><a href="{{ route('mysite_brief', app()->getLocale()) }}" class="a-green">{{ trans('site.m_download_brief_develop') }}</a></div>
-                <div><a href="{{ route('mysite_online_brief', app()->getLocale()) }}" class="a-green">{{ trans('site.m_brief_online') }}</a></div>
-                <div><a href="{{ route('mysite_download_price', app()->getLocale()) }}" class="a-green">{{ trans('site.mysite_download_price') }}</a></div>
+                <div><a href="{{ route('mysite_brief', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.m_download_brief_develop') }}</a></div>
+                <div><a href="{{ route('mysite_online_brief', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.m_brief_online') }}</a></div>
+                <div><a href="{{ route('mysite_download_price', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.mysite_download_price') }}</a></div>
                 <br/>
-                <div><a href="{{ route('test-php', app()->getLocale()) }}" class="a-green">{{ trans('site.test_php') }}</a></div>
-                <div><a href="{{ route('wait', app()->getLocale()) }}" class="a-green">{{ trans('wait.i_wait_you') }}</a></div>
-                <div><a href="{{ route('wait2', app()->getLocale()) }}" class="a-green">{{ trans('wait.wait_for_a_date') }}</a></div>
-                <div><a href="{{ route('seo_words', app()->getLocale()) }}" class="a-green">{{ trans('site.count_seo_words') }}</a></div>
-                <div><a href="https://makklays.com/sitemap.xml" class="a-green">Sitemap</a></div>
+                <div><a href="{{ route('test-php', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.test_php') }}</a></div>
+                <div><a href="{{ route('wait', app()->getLocale()) }}" class="a-green-xl">{{ trans('wait.i_wait_you') }}</a></div>
+                <div><a href="{{ route('wait2', app()->getLocale()) }}" class="a-green-xl">{{ trans('wait.wait_for_a_date') }}</a></div>
+                <div><a href="{{ route('seo_words', app()->getLocale()) }}" class="a-green-xl">{{ trans('site.count_seo_words') }}</a></div>
+                <div><a href="https://makklays.com/sitemap.xml" class="a-green-xl">Sitemap</a></div>
                 <br/>
             </div>
             <div class="col-md-12">
-                <p>&copy; makklays.com 2007-<?=date('Y')?></p>
+                <p style="font-size:18px;">&copy; makklays.com 2007-<?=date('Y')?></p>
             </div>
         </div>
     </div>
