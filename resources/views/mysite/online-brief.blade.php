@@ -14,7 +14,7 @@
         <div class="col-md-12">
             <h2 class="text-center text-design2">{{ trans('site.Base_info') }}</h2> <br/>
 
-            <form action="{{ route('mysite_online_brief_post', app()->getLocale()) }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('mysite_online_brief_post', ['locale' => app()->getLocale()]) }}" method="POST" enctype="multipart/form-data" >
                 {{ csrf_field() }}
 
                 <div class="row">

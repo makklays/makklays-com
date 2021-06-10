@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'Cancel' => 'Cancel',
+    'Data_employee' => 'Data of employee',
     'Cat-o-dog' => 'Cats or dogs',
     'Feedback' => 'Feedback',
     'header_mysite' => 'Programming and website development',
@@ -1072,6 +1074,8 @@ System sites are available on business days and times at the enterprise. And at 
     'Add_new_employee' => 'Add a new employee',
 
     'Pricee' => 'Price',
+
+    'cart' => 'Shopping cart',
     '' => '',
     '' => '',
     '' => '',
