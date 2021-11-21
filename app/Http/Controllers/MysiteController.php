@@ -903,21 +903,31 @@ class MysiteController extends Controller
         $arr_words = [];
         $length_characters = 0;
         $arr_count_words = ['total' => 0];
+        $arr_count_2words = ['total' => 0];
         if ($request->isMethod('post')) {
             $full_words = mb_strtolower($request->get('fulltext'));
             $length_characters = strlen($full_words); // число сисмолов в тексте
 
-            $words = str_replace(['.', ',', ';', ':', '!', '?', '(', ')', '=', '"', "'", '[', ']'], '', $full_words);
-            $words = str_replace(['-', '—'], ' ', $words);
+            $words = str_replace(['«', '»', '.', ',', ';', ':', '!', '?', '(', ')', '=', '"', "'", '[', ']'], '', $full_words);
+            $words = str_replace(['-', '—', '   ', '  '], ' ', $words);
 
-            $arr_short_words = [' a ', ' к ', ' на ', ' или ', ' это ', ' для ', ' с ', ' от ', ' и ', ' в ', ' из ', ' как '];
+            $arr_short_words = [' a ', ' к ', ' на ', ' или ', ' это ', ' для ', ' с ', ' от ', ' то ', ' ли ', ' и ', ' в ', ' из ', ' как ', "\r\n", "\t"];
+
             $words = str_replace($arr_short_words, ' ', $words);
+            $words = str_replace(['   ', '  '], ' ', $words);
 
             $arr_words = explode(' ', $words);
-            foreach($arr_words as $word) {
+            foreach($arr_words as $k => $word) {
                 $word = mb_strtolower($word);
                 @$arr_count_words[$word] += 1;
                 $arr_count_words['total'] += 1;
+
+                if (isset($arr_words[($k + 1)])) {
+                    $next_word = mb_strtolower($arr_words[($k + 1)]);
+
+                    @$arr_count_2words[$word.' '.$next_word] += 1;
+                    $arr_count_2words['total'] += 1;
+                }
             }
 
             // отбрасываем слова которые упоминаются только 1 раз
@@ -926,9 +936,17 @@ class MysiteController extends Controller
                     unset($arr_count_words[$word]);
                 }
             }
+            foreach($arr_count_2words as $word => $count) {
+                if ($count == 1) {
+                    unset($arr_count_2words[$word]);
+                }
+            }
         }
 
         arsort($arr_count_words);
+        arsort($arr_count_2words);
+
+        //dd($words, $arr_count_2words, $arr_count_words);
 
         // добавляем данные в историю звонков (для возможности добавить в blacklist по числу отправок)
         // добавляем данные в историю звонков - так как нет таблицы истории отправок форм
@@ -945,6 +963,7 @@ class MysiteController extends Controller
         return view('mysite.count-seo-words', [
             'full_words' => trim($full_words),
             'arr_words' => $arr_count_words,
+            'arr_2words' => $arr_count_2words,
             'words' => $words,
             'seo' => $seo,
             'length_characters' => $length_characters,
