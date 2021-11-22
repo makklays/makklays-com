@@ -865,14 +865,14 @@ class MysiteController extends Controller
         }
 
         // провяем добавлять ли в blacklist
-        $calls = DB::selectOne('SELECT count(*) count_call FROM `call` WHERE want_development=? AND ip_address=? AND ?<=created_at AND created_at<=?',
+        /*$calls = DB::selectOne('SELECT count(*) count_call FROM `call` WHERE want_development=? AND ip_address=? AND ?<=created_at AND created_at<=?',
             ['seo-word', $this->getRealUserIp(), ( time() - 60 ), time()]);
         // за минуту отправили больше 25 раз форму - в blacklist
         if (isset($calls->count_call) && !empty($calls->count_call) && $calls->count_call >= 25) {
             DB::insert('INSERT INTO blacklist SET ip=?', [$this->getRealUserIp()]);
             return redirect(route('mysite_blacklist', [app()->getLocale()]));
             exit;
-        }
+        }*/
 
         $new_url = $this->new_url();
 
@@ -950,7 +950,7 @@ class MysiteController extends Controller
 
         // добавляем данные в историю звонков (для возможности добавить в blacklist по числу отправок)
         // добавляем данные в историю звонков - так как нет таблицы истории отправок форм
-        DB::insert('INSERT INTO `call` SET fio=?, phone=?, want_development=?, ip_address=?, lang=?, created_at=?',
+        /*DB::insert('INSERT INTO `call` SET fio=?, phone=?, want_development=?, ip_address=?, lang=?, created_at=?',
             [
                 'anonimous',
                 '+380111111111',
@@ -958,7 +958,7 @@ class MysiteController extends Controller
                 $this->getRealUserIp(),
                 app()->getLocale(),
                 time()
-            ]);
+            ]);*/
 
         return view('mysite.count-seo-words', [
             'full_words' => trim($full_words),
