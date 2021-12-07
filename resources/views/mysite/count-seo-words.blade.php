@@ -21,15 +21,6 @@
             </h4>
             <ul class="list-group mb-3">
 
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                    <div>
-                        <h6>{{ trans('site.Uniq_words') }}</h6>
-                        <small class="text-muted">({{ trans('site.Uniq_words_desc') }})</small>
-                    </div>
-                    <span class="text-muted">
-                        <?= !empty($arr_words) ? (count($arr_words) - 1) : 0 ?>
-                    </span>
-                </li>
                 <li class="list-group-item d-flex justify-content-between">
                     <div>
                         <span>{{ trans('site.Total') }}</span><br/>
@@ -42,6 +33,15 @@
                     <strong>
                         <?= (isset($arr_words['total']) && !empty($arr_words['total']) ? $arr_words['total'] : 0) ?>
                     </strong>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6>{{ trans('site.Uniq_words') }}</h6>
+                        <small class="text-muted">({{ trans('site.Uniq_words_desc') }})</small>
+                    </div>
+                    <span class="text-muted">
+                        <?= !empty($arr_words) ? (count($arr_words) - 1) : 0 ?>
+                    </span>
                 </li>
 
                 <?php if (isset($arr_3words) && !empty($arr_3words)): ?>
