@@ -904,6 +904,7 @@ class MysiteController extends Controller
         $length_characters = 0;
         $arr_count_words = ['total' => 0];
         $arr_count_2words = ['total' => 0];
+        $arr_count_3words = ['total' => 0];
         if ($request->isMethod('post')) {
             $full_words = mb_strtolower($request->get('fulltext'));
             $length_characters = strlen($full_words); // число сисмолов в тексте
@@ -911,8 +912,11 @@ class MysiteController extends Controller
             $words = str_replace(['«', '»', '.', ',', ';', ':', '!', '?', '(', ')', '=', '"', "'", '[', ']'], '', $full_words);
             $words = str_replace(['-', '—', '   ', '  '], ' ', $words);
 
-            $arr_short_words = [' a ', ' к ', ' на ', ' или ', ' это ', ' для ', ' с ', ' от ', ' то ', ' ли ', ' и ', ' в ', ' из ', ' как ', "\r\n", "\t"];
+            $arr_short_words = [' a ', ' к ', ' на ', ' или ', ' это ', ' с ', ' от ', ' то ', ' ли ', ' и ', ' в ', "\r\n", "\t"];
+            $words = str_replace($arr_short_words, ' ', $words);
+            $words = str_replace(['   ', '  '], ' ', $words);
 
+            $arr_short_words = [' the ', ' in ', ' on ', ' a ', ' at ', ' of ', ' with ', ' from ', ' to ', "\r\n", "\t"];
             $words = str_replace($arr_short_words, ' ', $words);
             $words = str_replace(['   ', '  '], ' ', $words);
 
@@ -927,6 +931,13 @@ class MysiteController extends Controller
 
                     @$arr_count_2words[$word.' '.$next_word] += 1;
                     $arr_count_2words['total'] += 1;
+
+                    if (isset($arr_words[($k + 2)])) {
+                        $next_next_word = mb_strtolower($arr_words[($k + 2)]);
+
+                        @$arr_count_3words[$word.' '.$next_word.' '.$next_next_word] += 1;
+                        $arr_count_3words['total'] += 1;
+                    }
                 }
             }
 
@@ -941,10 +952,16 @@ class MysiteController extends Controller
                     unset($arr_count_2words[$word]);
                 }
             }
+            foreach($arr_count_3words as $word => $count) {
+                if ($count == 1) {
+                    unset($arr_count_3words[$word]);
+                }
+            }
         }
 
         arsort($arr_count_words);
         arsort($arr_count_2words);
+        arsort($arr_count_3words);
 
         //dd($words, $arr_count_2words, $arr_count_words);
 
@@ -964,6 +981,7 @@ class MysiteController extends Controller
             'full_words' => trim($full_words),
             'arr_words' => $arr_count_words,
             'arr_2words' => $arr_count_2words,
+            'arr_3words' => $arr_count_3words,
             'words' => $words,
             'seo' => $seo,
             'length_characters' => $length_characters,

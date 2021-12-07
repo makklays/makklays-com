@@ -20,31 +20,6 @@
                 </span>
             </h4>
             <ul class="list-group mb-3">
-                <?php if (isset($arr_2words) && !empty($arr_2words)): ?>
-                    <?php foreach($arr_2words as $word => $count): ?>
-                        <?php if($word == 'total') continue; ?>
-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                            <div>
-                                <h6 class="my-0"><?=$word?></h6>
-                                <!--small class="text-muted">Brief description</small-->
-                            </div>
-                            <span class="text-muted"><?=$count?></span>
-                        </li>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-
-                <?php if (isset($arr_words) && !empty($arr_words)): ?>
-                    <?php foreach($arr_words as $word => $count): ?>
-                        <?php if($word == 'total') continue; ?>
-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                            <div>
-                                <h6 class="my-0"><?=$word?></h6>
-                                <!--small class="text-muted">Brief description</small-->
-                            </div>
-                            <span class="text-muted"><?=$count?></span>
-                        </li>
-                    <?php endforeach; ?>
-                <?php endif; ?>
 
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
@@ -68,6 +43,44 @@
                         <?= (isset($arr_words['total']) && !empty($arr_words['total']) ? $arr_words['total'] : 0) ?>
                     </strong>
                 </li>
+
+                <?php if (isset($arr_3words) && !empty($arr_3words)): ?>
+                    <?php foreach($arr_3words as $word => $count): ?>
+                        <?php if($word == 'total') continue; ?>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0"><?=$word?></h6>
+                            </div>
+                            <span class="text-muted"><?=$count?></span>
+                        </li>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+                <?php if (isset($arr_2words) && !empty($arr_2words)): ?>
+                    <?php foreach($arr_2words as $word => $count): ?>
+                        <?php if($word == 'total') continue; ?>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0"><?=$word?></h6>
+                            </div>
+                            <span class="text-muted"><?=$count?></span>
+                        </li>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+                <?php if (isset($arr_words) && !empty($arr_words)): ?>
+                    <?php foreach($arr_words as $word => $count): ?>
+                        <?php if($word == 'total') continue; ?>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0"><?=$word?></h6>
+                                <!--small class="text-muted">Brief description</small-->
+                            </div>
+                            <span class="text-muted"><?=$count?></span>
+                        </li>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
             </ul>
         </div>
 
