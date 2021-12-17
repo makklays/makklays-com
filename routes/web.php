@@ -18,9 +18,6 @@ Route::get('sitemap.xml', 'App\Http\Controllers\MysiteController@sitemap')->name
 
 // bot
 Route::match(['get', 'post'], 'bota', ['as' => 'bota', 'uses' => 'App\Http\Controllers\BotController@index']);
-/* bot form - send to telegram */
-Route::get('bots', ['as' => 'bots', 'uses' => 'App\Http\Controllers\BotController@bots']);
-Route::post('bots-post', ['as' => 'bots-post', 'uses' => 'App\Http\Controllers\BotController@bots_post']);
 
 Route::get('/', function () {
     return redirect( app()->getLocale() );
@@ -36,6 +33,10 @@ Route::group([
 
     // main
     Route::get('', 'App\Http\Controllers\MysiteController@main')->name('/');
+
+    /* bot form - send to telegram */
+    Route::get('bots', ['as' => 'bots', 'uses' => 'App\Http\Controllers\BotController@bots']);
+    Route::post('bots-post', ['as' => 'bots-post', 'uses' => 'App\Http\Controllers\BotController@bots_post']);
 
     // home
     Route::get('home', 'App\Http\Controllers\HomeController@index')->name('home');
