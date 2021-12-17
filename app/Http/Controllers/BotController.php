@@ -295,7 +295,7 @@ class BotController extends Controller
                     'sendMessage',
                     array(
                         'chat_id' => $data['message']['chat']['id'],
-                        'text' => "Меня зовут BotMakklays.\r\nУточните запрос, еще раз"
+                        'text' => "Меня зовут BotMakklays.\r\nУточните запрос, еще раз ".$data['message']['chat']['id'],
                     )
                 );
             }
@@ -357,13 +357,9 @@ class BotController extends Controller
 
     public function bots_post(Request $request)
     {
+        /*
         $data = file_get_contents('php://input');
-        //$data = $request->all();
         $data = json_decode($data, true);
-
-        /*$insert = DB::insert('INSERT INTO message_bot SET message=?, created_at=?', [
-            strip_tags(trim($request->message)), time()
-        ]);*/
 
         ob_start();
         print_r($data);
@@ -372,7 +368,7 @@ class BotController extends Controller
 
         if (empty($data['message']['chat']['id'])) {
             exit();
-        }
+        }*/
 
         // url and tocken for registration file on site
         // https://api.telegram.org/bot1341219753:AAEZmkRU-J8CEnVVNaz77Kole0R2dqFySJA/setWebhook?url=https://makklays.com/bota
@@ -398,7 +394,7 @@ class BotController extends Controller
         sendTelegram(
             'sendMessage',
             array(
-                'chat_id' => $data['message']['chat']['id'],
+                'chat_id' => 111,
                 'text' => $request->msg, //"Меня зовут BotMakklays.\r\nУточните запрос, еще раз"
             )
         );
