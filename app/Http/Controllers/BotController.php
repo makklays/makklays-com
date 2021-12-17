@@ -357,32 +357,6 @@ class BotController extends Controller
 
     public function bots_post(Request $request)
     {
-        $new_url = $this->new_url();
-
-        $lang = app()->getLocale();
-        $seo = new \stdClass();
-        $seo->server_name = $request->server('SERVER_NAME');
-        $seo->request_scheme = $request->server('REQUEST_SCHEME');
-        $seo->short_url = $new_url;
-        $seo->show_urls = 1;
-        if ($lang == 'ru') {
-            $seo->title = 'Разработка сайта и ведение сайта';
-            $seo->description = 'Makklays - Разработка лендинг, разработка корпоративный сайт, делаем интернет-магазин, веб-портал, e-commerce website, сайт-система, веб-сервис и API для мобильных приложений';
-            $seo->keywords = 'разработка сайта, разработка, сайт, интернет-магазин, internet-shop, shop, корпоративный сайт, e-commerce website, лендинг, landing, веб-портал, дорого, разработка под ключ';
-        } else if ($lang == 'es') {
-            $seo->title = 'Desarrollo sitio web y mantenimiento de sitio web';
-            $seo->description = 'Makklays - Desarrollo de página de aterrizaje, sitio web corporativo, tienda en línea, portal web, e-commerce website, sistema de sitio web, servicio web y API para aplicaciones móviles';
-            $seo->keywords = 'desarrollo de sitios web, desarrollo, sitio web, tienda en línea, tienda de internet, tienda, sitio web corporativo, e-commerce website, página de inicio, aterrizaje, portal web, desarrollo costoso y llave en mano';
-        } else if ($lang == 'ua') {
-            $seo->title = 'Розробка сайту та ведення сайту';
-            $seo->description = 'Makklays - Розробка стрічки, розробка корпоративного сайту, створення інтернет-магазину, веб-порталу, веб-сайту електронної комерції, веб-системи, веб-сервісу та API для мобільних додатків';
-            $seo->keywords = 'розробка сайту, розробка, сайт, інтернет-магазин, інтернет-магазин, магазин, корпоративний сайт, веб-сайт електронної комерції, стрічка, посадка, веб-портал, дорого, розробка під ключ';
-        } else {
-            $seo->title = 'Website development and Website maintenance';
-            $seo->description = 'Makklays - Landing page development, corporate website development, online store, web portal, website system, e-commerce website, web service and API for mobile applications';
-            $seo->keywords = 'website development, development, website, online store, internet-shop, shop, corporate website, landing page, e-commerce website, landing, web portal, expensive, turnkey development';
-        }
-
         $data = file_get_contents('php://input');
         //$data = $request->all();
         $data = json_decode($data, true);
