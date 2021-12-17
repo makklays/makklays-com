@@ -394,8 +394,8 @@ class BotController extends Controller
         sendTelegram(
             'sendMessage',
             array(
-                'chat_id' => 111,
-                'text' => $request->msg, //"Меня зовут BotMakklays.\r\nУточните запрос, еще раз"
+                'chat_id' => 605019816,
+                'text' => $request->get('msg'), //"Меня зовут BotMakklays.\r\nУточните запрос, еще раз"
             )
         );
 
